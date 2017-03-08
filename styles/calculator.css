@@ -1,0 +1,128 @@
+.calculator #result-container {
+    width: 399px;
+    height: 80px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -220px;
+    background-color: #3d3c35;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.calculator #result-container div {
+    text-align: right;
+    padding-top: 17px;
+    padding-right: 10px;
+    font-size: 2.5em;
+    color: white;
+}
+
+.calculator #main-container {
+    width: 400px;
+    height: 400px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -220px;
+    margin-left: -220px;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.calculator #main-container div {
+    width: 80px;
+    height: 80px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.calculator #main-container div:hover {
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.calculator #reset-delete {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: 100px;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.calculator #reset-delete div{
+    width: 80px;
+    height: 80px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.calculator #reset-delete div:hover {
+    background-color: white;
+}
+
+.calculator .reset-delete {
+    background-color: #c5c8cc;
+    font-weight: bold;
+}
+
+.calculator .square-root {
+    background-color: #c5c8cc;
+    font-weight: bold;
+}
+
+.calculator .operator {
+    background-color: darkorange;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.calculator .total {
+    background-color: darkorange;
+}
+
+.calculator .memory {
+    background-color: darkorange;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+
+<div ng-controller="UsersController" class="users">
+
+
+
+    <form id="createUser">
+        First Name: <input type="text" ng-model="editable.firstname"><br>
+        Last Name: <input type="text" ng-model="editable.lastname"><br>
+        Email: <input type="email" ng-model="editable.email"><br>
+        <button ng-click="add()">Submit</button>
+    </form>
+
+    <table>
+        <tr>
+            <th ng-repeat="field in fields">{{field.label}}</th>
+        </tr>
+        <tr ng-repeat="user in users.data">
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.email}}</td>
+            <td>
+                <button ng-click="edit(user)">Edit</button>
+                <button ng-click="delete(user)">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <div class="popup" ng-show="popup">
+        <form id="editUser">
+            <div>First Name: <input ng-model="editable.firstname" type="text"></div>
+            <div>Last Name: <input ng-model="editable.lastname" type="text"></div>
+            <div>Email: <input ng-model="editable.email" type="email"></div>
+            <button value="save" ng-click="save()">Save</button>
+            <button value="cancel" ng-click="popup = false">Cancel</button>
+        </form>
+    </div>
+
+</div>

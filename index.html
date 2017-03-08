@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular Router</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/todo.css" />
+    <link rel="stylesheet" type="text/css" href="styles/users.css" />
+    <link rel="stylesheet" type="text/css" href="styles/calculator.css" />
+
+    <!-- INCLUDING LIBRARIES -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- DEFINING OUR APP -->
+    <script src="app.js"></script>
+
+    <!-- LOADING SERVICES -->
+    <script src="services/UsersService.js"></script>
+
+    <!-- INCLUDING CONTROLLERS INTO OUR APP -->
+    <script src="controllers/CalculatorController.js"></script>
+    <script src="controllers/TodoController.js"></script>
+    <script src="controllers/UsersController.js"></script>
+    <script src="controllers/FilterController.js"></script>
+</head>
+<body>
+
+<div ng-app="route-demo">
+    <ul class="navigation">
+        <li><a ui-sref="users" ui-sref-active="active">Users</a></li>
+        <li><a ui-sref="todo" ui-sref-active="active">Todo</a></li>
+        <li><a ui-sref="calculator" ui-sref-active="active">Calculator</a></li>
+        <li><a ui-sref="filter" ui-sref-active="active">Filter</a></li>
+    </ul>
+    <ui-view></ui-view>
+
+
+</div>
+
+<script>
+
+
+</script>
+
+
+</body>
+</html>

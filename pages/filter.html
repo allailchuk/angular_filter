@@ -1,0 +1,12 @@
+<div ng-controller="FilterController">
+
+    <select ng-model="selectedField" ng-options="field for field in fields"></select>
+    <input ng-model="search">
+
+    <ul>
+        <li ng-repeat="product in products | SearchByField:selectedField:search">
+            {{product.name}} / {{product.price}} ({{product.category.join(', ')}})
+        </li>
+    </ul>
+
+</div>

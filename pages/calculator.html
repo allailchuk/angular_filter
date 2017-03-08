@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles/calculator.css">
+
+</head>
+<body>
+<div ng-controller="CalculatorController" class="calculator">
+    <div id="result-container" >
+        <div class="display">{{value}}</div>
+    </div>
+
+    <div id="main-container">
+        <div ng-click="resetValue()" class="reset-delete">AC</div>
+        <div ng-click="deleteSymbol()" class="reset-delete">DEL</div>
+        <div ng-click="squareRoot()" class="square-root">&radic;</div>
+        <div ng-click="addOperator('/')" class="operator">/</div>
+        <div ng-click="addToMemory()" class="memory">M+</div>
+        <div ng-click="addValue(7)">7</div>
+        <div ng-click="addValue(8)">8</div>
+        <div ng-click="addValue(9)">9</div>
+        <div ng-click="addOperator('*')" class="operator" >*</div>
+        <div class="memory">M-</div>
+        <div ng-click="addValue(4)">4</div>
+        <div ng-click="addValue(5)">5</div>
+        <div ng-click="addValue(6)">6</div>
+        <div ng-click="addOperator('-')"class="operator">-</div>
+        <div ng-click="memoryResult()" class="memory">MR</div>
+        <div ng-click="addValue(1)">1</div>
+        <div ng-click="addValue(2)">2</div>
+        <div ng-click="addValue(3)">3</div>
+        <div ng-click="addOperator('+')" class="operator">+</div>
+        <div ng-click="clearMemory()" class="memory">MC</div>
+        <div ng-click="addValue(0)" style="width:160px">0</div>
+        <div ng-click="addValue('.')">.</div>
+        <div ng-click="total()" class="total">=</div>
+        <div ng-click="doTheMagic()" class="memory">Magic</div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
