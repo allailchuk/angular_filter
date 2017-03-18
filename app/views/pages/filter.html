@@ -1,0 +1,17 @@
+<div ng-controller="FilterController">
+
+    <select ng-model="selectedField" ng-options="field for field in fields"></select>
+    <input ng-model="search">
+
+    <button ng-if="!products.toggle" ng-click="products.toggle = true">Show products</button>
+    <button ng-if="products.toggle" ng-click="products.toggle = false">Hide products</button>
+    <ul ng-class="{'hidden':!products.toggle}">
+        <li ng-repeat="product in products | SearchByField:selectedField:search"
+            ng-class="{'over-thousand':product.price > 1000 , 'under-thousand':product.price < 1000}"
+
+        >
+            {{product.name}} / {{product.price}} ({{product.category.join(', ')}})
+        </li>
+    </ul>
+
+</div>

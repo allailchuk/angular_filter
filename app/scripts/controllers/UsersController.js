@@ -76,13 +76,41 @@ myApp.controller('UsersController', function ($scope, Users) {
     };
 
 
-    $scope.selectedField = 'firstname';
     $scope.fields = [
         {name: 'firstname', label: 'First Name'},
         {name: 'lastname', label: 'Last Name'},
         {name: 'email', label: 'Email'},
         {name: 'action', label: 'Action'}
     ];
+
+
+    /**
+     * Adding filter function
+     */
+    myApp.filter('SearchByField', function() {
+        return function (list, field, value) {
+            if (!field || !value) {
+                return list;
+            }
+            value = value.toLowerCase();
+            var filtered = [];
+            for (var i=0; i<list.length; i++) {
+                var item = list[i];
+                if (typeof (item[field]) == 'string' && item[field].toLowerCase().indexOf(value)!=-1){
+                    filtered.push(item);
+                } else if (item[field] instanceof Array){
+                    for(var ii=0; ii<item[field].length; ii++){
+                        if (item[field][ii].toLowerCase().indexOf(value)!=-1) {
+                            filtered.push(item);
+                        }
+                    }
+
+                }
+            }
+            return filtered;
+        };
+    });
+
 
 
 

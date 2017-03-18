@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular Router</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/todo.css" />
+    <link rel="stylesheet" type="text/css" href="styles/users.css" />
+    <link rel="stylesheet" type="text/css" href="styles/calculator.css" />
+    <link rel="stylesheet" type="text/css" href="styles/filter.css" />
+
+</head>
+<body>
+
+<div ng-app="route-demo">
+    <ul class="navigation">
+        <li><a ui-sref="users" ui-sref-active="active">Users</a></li>
+        <li><a ui-sref="todo" ui-sref-active="active">Todo</a></li>
+        <li><a ui-sref="calculator" ui-sref-active="active">Calculator</a></li>
+        <li><a ui-sref="filter" ui-sref-active="active">Filter</a></li>
+    </ul>
+    <ui-view></ui-view>
+
+    <!-- Dependencies -->
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
+    <!-- Scripts -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/CalculatorController.js"></script>
+    <script src="scripts/controllers/TodoController.js"></script>
+    <script src="scripts/controllers/UsersController.js"></script>
+    <script src="scripts/controllers/FilterController.js"></script>
+
+    <!-- Services-->
+    <script src="scripts/services/UsersService.js"></script>
+    <script src="scripts/services/ToDoService.js"></script>
+
+</div>
+
+<script>
+
+
+</script>
+
+
+</body>
+</html>

@@ -4,20 +4,20 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('users', {
             url: '/users',
-            templateUrl: 'pages/users.html'
+            templateUrl: 'views/pages/users.html'
         })
         .state('todo', {
             url: '/todo',
             controller: 'TodoController',
-            templateUrl: 'pages/todo.html'
+            templateUrl: 'views/pages/todo.html'
         })
         .state('calculator', {
             url: '/calculator',
-            templateUrl: 'pages/calculator.html'
+            templateUrl: 'views/pages/calculator.html'
         })
         .state('filter', {
             url: '/filter',
-            templateUrl: 'pages/filter.html'
+            templateUrl: 'views/pages/filter.html'
         });
     $urlRouterProvider.otherwise('users');
 });

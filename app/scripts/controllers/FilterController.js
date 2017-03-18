@@ -1,4 +1,6 @@
 myApp.controller('FilterController', function($scope) {
+
+
     $scope.products = [
         {name: 'Mac Pro', category: ['computers', 'electronics'], price: '1300'},
         {name: 'Macbook Pro', category: ['computers', 'laptops', 'electronics'], price: '1500'},

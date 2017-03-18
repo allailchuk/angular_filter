@@ -1,17 +1,16 @@
 
 <div class="todo">
-    <input type='text' ng-model="search">
     <div class="header">
         <div>My Angular TodoList</div>
-        <input type="text" ng-model="newItem">
-        <button ng-click="createItem()">Add</button>
+        <input type="text" ng-model="newItem.name">
+        <button ng-click="add()">Add</button>
     </div>
 
     <ul>
-        <li ng-repeat="item in items | filter:search">
+        <li ng-repeat="item in todos.items ">
             <button ng-click="item.checked = !item.checked"> {{ item.checked ? 'Checked' : 'Unchecked' }}</button>
             {{item.name}}
-            <button class="delete" ng-click="deleteItem(item)">X</button>
+            <button class="delete" ng-click="delete(item)">X</button>
         </li>
     </ul>
 

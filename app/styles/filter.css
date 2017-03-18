@@ -1,0 +1,12 @@
+.over-thousand {
+    background-color: gold;
+    color: white;
+}
+
+.under-thousand {
+    background-color: silver;
+    color: white;
+}
+.hidden {
+    display: none;
+}
