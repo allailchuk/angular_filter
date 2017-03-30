@@ -1,0 +1,16 @@
+
+<div>
+    <div class="selected" ng-click="show(); $event.stopPropagation()" >{{label}} </div>
+
+    <div class="options" ng-if="showOptions" onclick="event.stopPropagation()">
+        <input ng-model="searchOptions">
+
+        <ul class="list">
+            <li ng-repeat="option in options | filter:searchOptions" ng-click="optionClick(option)">{{option.label}}</li>
+            <li ng-if="(options | filter:searchOptions).length===0">No items found</li>
+        </ul>
+    </div>
+
+
+
+</div>

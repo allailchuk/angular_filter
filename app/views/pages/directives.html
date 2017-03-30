@@ -1,0 +1,25 @@
+<div ng-controller="DirectivesController">
+
+    <br>
+    <button ng-click="selectedOption = 'p5'">Outside Change</button>
+
+    <br>
+    <br>
+
+    {{selectedOption}}
+
+    <br>
+    <br>
+    <dropdown options="options" ng-model="selectedOption"></dropdown>
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <checkbox ng-model="test"></checkbox>
+
+    {{test}}
+
+</div>

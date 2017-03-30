@@ -10,7 +10,7 @@
         <li ng-repeat="item in todos.items ">
             <button ng-click="item.checked = !item.checked"> {{ item.checked ? 'Checked' : 'Unchecked' }}</button>
             {{item.name}}
-            <button class="delete" ng-click="delete(item)">X</button>
+            <button class="delete" ng-click="delete(item)" hint="Delete this">X</button>
         </li>
     </ul>
 

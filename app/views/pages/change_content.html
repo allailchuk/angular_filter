@@ -1,0 +1,19 @@
+<div ng-controller="ChangeContentController">
+
+    <h1>Hello there</h1>
+    <p>Please select box that you want to change</p>
+
+    <ul class="editable-list">
+        <li ng-repeat="item in content" class="boxes" ng-click="edit=true; focusEdit()">
+            <div ng-show="edit" ng-class="{editing:edit}">
+                <input type="text" ng-model="item.value" ng-blur="edit=false">
+            </div>
+            <div ng-show="!edit">
+                {{item.value}}
+            </div>
+        </li>
+    </ul>
+
+
+
+</div>

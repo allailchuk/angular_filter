@@ -18,6 +18,15 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         .state('filter', {
             url: '/filter',
             templateUrl: 'views/pages/filter.html'
+        })
+        .state('directives', {
+            url: '/directives',
+            templateUrl: 'views/pages/directives.html'
+        })
+        .state('change_content', {
+            url: '/change_content',
+            templateUrl: 'views/pages/change_content.html'
         });
+
     $urlRouterProvider.otherwise('users');
 });

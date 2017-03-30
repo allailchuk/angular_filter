@@ -1,0 +1,22 @@
+
+checkbox {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: white;
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+
+checkbox i {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+checkbox i.checked {
+    background-image: url("../../assets/images/checkbox_check.png");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

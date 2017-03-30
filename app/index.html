@@ -5,27 +5,36 @@
     <title>Angular Router</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="styles/todo.css" />
-    <link rel="stylesheet" type="text/css" href="styles/users.css" />
-    <link rel="stylesheet" type="text/css" href="styles/calculator.css" />
-    <link rel="stylesheet" type="text/css" href="styles/filter.css" />
+    <link rel="stylesheet" type="text/css" href="styles/pages/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/pages/todo.css" />
+    <link rel="stylesheet" type="text/css" href="styles/pages/users.css" />
+    <link rel="stylesheet" type="text/css" href="styles/pages/calculator.css" />
+    <link rel="stylesheet" type="text/css" href="styles/pages/filter.css" />
+    <link rel="stylesheet" type="text/css" href="styles/directives/hint.css">
+    <link rel="stylesheet" type="text/css" href="styles/directives/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="styles/directives/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="styles/pages/change_content.css">
 
 </head>
 <body>
 
 <div ng-app="route-demo">
     <ul class="navigation">
-        <li><a ui-sref="users" ui-sref-active="active">Users</a></li>
-        <li><a ui-sref="todo" ui-sref-active="active">Todo</a></li>
-        <li><a ui-sref="calculator" ui-sref-active="active">Calculator</a></li>
-        <li><a ui-sref="filter" ui-sref-active="active">Filter</a></li>
+        <li><a ui-sref="users" ui-sref-active="active" hint="This is awesome users">Users</a></li>
+        <li><a ui-sref="todo" ui-sref-active="active" hint="This is my grocery list">Todo</a></li>
+        <li><a ui-sref="calculator" ui-sref-active="active" hint="This is how i do my calculations">Calculator</a></li>
+        <li><a ui-sref="filter" ui-sref-active="active" hint="I like to filter filter">Filter</a></li>
+        <li><a ui-sref="directives" ui-sref-active="active" hint="Funking directives">Directives</a></li>
+        <li><a ui-sref="change_content" ui-sref-active="active" hint="Here I will change content">Change Content</a></li>
+
     </ul>
+
     <ui-view></ui-view>
 
     <!-- Dependencies -->
     <script src="../node_modules/angular/angular.min.js"></script>
     <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 
 
     <!-- Scripts -->
@@ -34,18 +43,19 @@
     <script src="scripts/controllers/TodoController.js"></script>
     <script src="scripts/controllers/UsersController.js"></script>
     <script src="scripts/controllers/FilterController.js"></script>
+    <script src="scripts/controllers/DirectivesController.js"></script>
+    <script src="scripts/controllers/ChangeContentController.js"></script>
 
     <!-- Services-->
     <script src="scripts/services/UsersService.js"></script>
     <script src="scripts/services/ToDoService.js"></script>
 
+    <!-- Directives -->
+    <script src="scripts/directives/hint.js"></script>
+    <script src="scripts/directives/user.js"></script>
+    <script src="scripts/directives/dropdown.js"></script>
+    <script src="scripts/directives/checkbox.js"></script>
+
 </div>
-
-<script>
-
-
-</script>
-
-
 </body>
 </html>
